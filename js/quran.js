@@ -1,4 +1,4 @@
-var current_page = 176;
+let current_page = 176;
 
 function load_suras() {
   p = $.ajax({
@@ -8,7 +8,7 @@ function load_suras() {
 
   p.done(function (data) {
     str = '';
-    for (var i = 0; i < data.length; i++) {
+    for (let i = 0; i < data.length; i++) {
       sura = data[i];
       str += '<tr id="sura_link_' + sura.id + '">';
       str += '<td>' + (i + 1) + '</td>';
@@ -65,7 +65,7 @@ function load_page(page) {
   p.done(function (data) {
     // Clear selected
     $('#suras tr').removeClass('active');
-    for (var i = 0; i < data.length; i++) {
+    for (let i = 0; i < data.length; i++) {
       aya = data[i];
       // console.log('Sura:' + aya.sura_id+' Aya:'+aya.aya_id);
       // Activate Sura
@@ -76,7 +76,7 @@ function load_page(page) {
       $a.data('sura', aya.sura_id);
       $a.data('aya', aya.aya_id);
       $a.addClass('aya_link');
-      for (var j = 0; j < aya.segs.length; j++) {
+      for (let j = 0; j < aya.segs.length; j++) {
         seg = aya.segs[j];
         if (seg.w != 0 && seg.w < 15) continue;
         if (seg.x < 15) {
@@ -99,20 +99,24 @@ function load_page(page) {
 function aya_clicked(event) {
   event.preventDefault();
   event.stopPropagation();
-  el = $(event.target).closest('a');
-  sura = el.data('sura');
-  aya = el.data('aya');
+  
+  // Ambil elemen yang diklik
+  let el = $(event.target).closest('a');
+  let sura = el.data('sura');
+  let aya = el.data('aya');
+  
+  load_aya(sura, aya);
+  
+  // Hapus class active dari semua ayat yang lain
   $('a.aya_link').removeClass('active');
   el.addClass('active');
-  // console.log('Aya Clicked!' + sura + ' ' + aya);
-  load_aya(sura, aya);
 }
 
 function load_aya(sura, aya) {
-  $taf = $('#tafseer');
+  let $taf = $('#tafseer');
   $taf.html('');
 
-  p = $.ajax({
+  let p = $.ajax({
     url: 'json/aya_' + sura + '_' + aya + '.json',
     dataType: 'json'
   });
@@ -122,17 +126,77 @@ function load_aya(sura, aya) {
   });
 
   p.done(function (data) {
-    str = '';
-    for (var i = 0; i < data.length; i++) {
-      taf = data[i];
+    let str = '<span class="close-modal">&times;</span>';
+    for (let i = 0; i < data.length; i++) {
+      let taf = data[i];
       str += '<div class="translation">';
       str += '<strong>' + "Terjemahan : " + '</strong><br>';
       str += taf.text + '<hr>';
       str += '</div>';
     }
-    $taf.html(str);
+    
+    // Tampilkan modal dengan konten
+    $('.modal-content').html(str);
+    $('.modal-overlay').css('display', 'flex');
   });
 }
+
+// Tutup modal ketika tombol tutup diklik
+$(document).on('click', '.close-modal', function() {
+  $('.modal-overlay').css('display', 'none');
+});
+
+// Tutup modal ketika latar belakang modal diklik
+$(document).on('click', '.modal-overlay', function(event) {
+  if ($(event.target).is('.modal-overlay')) {
+    $(this).css('display', 'none');
+  }
+});
+
+$(function () {
+  console.log('JQuery Started!');
+  load_suras();
+  load_page(174); // Start on page 174
+  $(document).on('click', 'a.sura_link', sura_clicked);
+  $(document).on('click', 'a.aya_link', aya_clicked);
+
+  $('.control__button').click(page_change);
+
+  // Hotkeys
+  $(document).bind('keydown', 'right', function () {
+    let p = parseInt(current_page) - 1;
+    load_page(p);
+  });
+  $(document).bind('keydown', 'left', function () {
+    let p = parseInt(current_page) + 1;
+    load_page(p);
+  });
+});
+
+// Tutup modal ketika tombol tutup diklik
+$(document).on('click', '.close-modal', function() {
+  $('.modal-overlay').css('display', 'none');
+});
+
+$(function () {
+  console.log('JQuery Started!');
+  load_suras();
+  load_page(174); // Start on page 176
+  $(document).on('click', 'a.sura_link', sura_clicked);
+  $(document).on('click', 'a.aya_link', aya_clicked);
+
+  $('.control__button').click(page_change);
+
+  // Hotkeys
+  $(document).bind('keydown', 'right', function () {
+    let p = parseInt(current_page) - 1;
+    load_page(p);
+  });
+  $(document).bind('keydown', 'left', function () {
+    let p = parseInt(current_page) + 1;
+    load_page(p);
+  });
+});
 
 
 function page_change(event) {
