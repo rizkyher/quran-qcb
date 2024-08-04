@@ -2,9 +2,23 @@ html {
   font-size: 10px;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Pusatkan secara horizontal */
+  align-items: center; /* Pusatkan secara vertikal jika diperlukan */
+  height: 100vh; /* Pastikan body mengisi seluruh tinggi viewport */
+  background-color: #f8f8f8; /* Tambahkan latar belakang jika diperlukan */
+  direction: ltr; /* Gaya penulisan dari kiri ke kanan */
+}
+
 #wrapper {
   width: 96rem;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #control {
@@ -30,50 +44,28 @@ html {
   padding-bottom: 0.5rem;
 }
 
-#main {
-  display: flex;
-  margin-top: 1.5rem;
-}
-
-#suras {
-  top: 1.5rem;
-  width: 20rem;
-  height: 43rem;
-  overflow: auto;
-}
-#suras .active {
-  background-color: navy;
-  color: white;
-}
-#suras .active a {
-  color: white;
-}
-
-.suras__table {
-  font-size: 1.6rem;
-}
-
-.suras__table th,
-.suras__table td {
-  text-align: center;
-}
-
 #page {
   position: relative;
   height: 43rem;
-  width: 29rem;
-  margin-right: 2rem;
+  width: 27rem;
+  margin: 2rem 0; /* Jarak vertikal antara elemen */
+  background-size: cover; /* Sesuaikan gambar dengan ukuran elemen */
+  background-position: center; /* Pastikan gambar berada di tengah */
+  background-repeat: no-repeat; /* Mencegah pengulangan gambar */
 }
+
 #page a:hover div {
   background-color: yellow;
   opacity: 0.2;
   filter: alpha(opacity=25);
 }
+
 #page a.active div {
   background-color: blue;
   opacity: 0.2;
   filter: alpha(opacity=25);
 }
+
 #page div {
   position: absolute;
 }
@@ -83,6 +75,31 @@ html {
   width: 29rem;
   background-color: #f8f8f8;
   overflow: auto;
-  margin-right: 1rem;
+  margin: 1rem 0; /* Jarak vertikal antara elemen */
   font-size: 1.6rem;
+  direction: ltr; /* Gaya penulisan dari kiri ke kanan */
+}
+
+.translation {
+  margin-top: 10px; /* Space between ayat and translation */
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: left; /* Make text align to the left */
+  direction: ltr; /* Gaya penulisan dari kiri ke kanan */
+}
+
+/* CSS untuk dropdown */
+.aya-dropdown {
+  display: none; /* Sembunyikan dropdown secara default */
+  margin-top: 5px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.aya-dropdown.active {
+  display: block; /* Tampilkan dropdown jika aktif */
 }

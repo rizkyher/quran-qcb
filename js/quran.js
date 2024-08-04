@@ -109,7 +109,6 @@ function aya_clicked(event) {
 }
 
 function load_aya(sura, aya) {
-  var tafseer_name = Array('مشكل', 'نصي', 'الجلالين', 'الميسر', 'ابن كثير');
   $taf = $('#tafseer');
   $taf.html('');
 
@@ -126,16 +125,15 @@ function load_aya(sura, aya) {
     str = '';
     for (var i = 0; i < data.length; i++) {
       taf = data[i];
-      str +=
-        '<strong>' +
-        tafseer_name[taf.type] +
-        '</strong><br>' +
-        taf.text +
-        '<hr>';
+      str += '<div class="translation">';
+      str += '<strong>' + "Terjemahan : " + '</strong><br>';
+      str += taf.text + '<hr>';
+      str += '</div>';
     }
     $taf.html(str);
   });
 }
+
 
 function page_change(event) {
   event.preventDefault();
