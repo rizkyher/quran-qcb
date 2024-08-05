@@ -44,8 +44,8 @@ body {
 }
 
 #page {
-  width: 40rem;
-  height: 30rem;
+  width: 100rem;
+  height: 100rem;
   background-size: cover; /* Sesuaikan gambar dengan ukuran elemen */
   background-position: center; /* Pastikan gambar berada di tengah */
   background-repeat: no-repeat; /* Mencegah pengulangan gambar */
@@ -61,16 +61,6 @@ body {
   background-color: blue;
   opacity: 0.2;
   filter: alpha(opacity=25);
-}
-
-#tafseer {
-  height: 43rem;
-  width: 29rem;
-  background-color: #f8f8f8;
-  overflow: auto;
-  margin: 1rem 0; /* Jarak vertikal antara elemen */
-  font-size: 1.6rem;
-  direction: ltr; /* Gaya penulisan dari kiri ke kanan */
 }
 
 .translation {
