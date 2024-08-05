@@ -1,0 +1,116 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  justify-content: center; /* Pusatkan secara horizontal */
+  align-items: center; /* Pusatkan secara vertikal jika diperlukan */
+  height: 100vh; /* Pastikan body mengisi seluruh tinggi viewport */
+  background-color: #f8f8f8; /* Tambahkan latar belakang jika diperlukan */
+  direction: ltr; /* Gaya penulisan dari kiri ke kanan */
+}
+
+#container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: silver;
+  font-size: 1.6rem;
+}
+
+.control__page-num {
+  display: inline-block;
+  padding-top: 0.3rem;
+}
+
+.control__button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: navy;
+  text-decoration: underline;
+  font-size: 1.6rem;
+  padding-bottom: 0.5rem;
+}
+
+#page {
+  width: 40rem;
+  height: 30rem;
+  background-size: cover; /* Sesuaikan gambar dengan ukuran elemen */
+  background-position: center; /* Pastikan gambar berada di tengah */
+  background-repeat: no-repeat; /* Mencegah pengulangan gambar */
+}
+
+#page a:hover div {
+  background-color: yellow;
+  opacity: 0.2;
+  filter: alpha(opacity=25);
+}
+
+#page a.active div {
+  background-color: blue;
+  opacity: 0.2;
+  filter: alpha(opacity=25);
+}
+
+#tafseer {
+  height: 43rem;
+  width: 29rem;
+  background-color: #f8f8f8;
+  overflow: auto;
+  margin: 1rem 0; /* Jarak vertikal antara elemen */
+  font-size: 1.6rem;
+  direction: ltr; /* Gaya penulisan dari kiri ke kanan */
+}
+
+.translation {
+  margin-top: 10px; /* Space between ayat and translation */
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: left; /* Make text align to the left */
+  direction: ltr; /* Gaya penulisan dari kiri ke kanan */
+}
+
+/* Gaya untuk latar belakang modal */
+.modal-overlay {
+  position: relative;
+  bottom: 100;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Gaya untuk konten modal */
+.modal-content {
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 340px;
+  width: 50%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+/* Gaya untuk tombol tutup */
+.close-modal {
+  float: right;
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
