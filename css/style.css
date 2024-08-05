@@ -5,7 +5,6 @@ html {
 body {
   margin: 0;
   padding: 0;
-  display: flex;
   justify-content: center; /* Pusatkan secara horizontal */
   align-items: center; /* Pusatkan secara vertikal jika diperlukan */
   height: 100vh; /* Pastikan body mengisi seluruh tinggi viewport */
@@ -13,8 +12,8 @@ body {
   direction: ltr; /* Gaya penulisan dari kiri ke kanan */
 }
 
-#wrapper {
-  width: 96rem;
+#container {
+  width: 100%;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -45,10 +44,8 @@ body {
 }
 
 #page {
-  position: relative;
-  height: 43rem;
-  width: 27rem;
-  margin: 2rem 0; /* Jarak vertikal antara elemen */
+  width: 100rem;
+  height: 100rem;
   background-size: cover; /* Sesuaikan gambar dengan ukuran elemen */
   background-position: center; /* Pastikan gambar berada di tengah */
   background-repeat: no-repeat; /* Mencegah pengulangan gambar */
@@ -66,20 +63,6 @@ body {
   filter: alpha(opacity=25);
 }
 
-#page div {
-  position: absolute;
-}
-
-#tafseer {
-  height: 43rem;
-  width: 29rem;
-  background-color: #f8f8f8;
-  overflow: auto;
-  margin: 1rem 0; /* Jarak vertikal antara elemen */
-  font-size: 1.6rem;
-  direction: ltr; /* Gaya penulisan dari kiri ke kanan */
-}
-
 .translation {
   margin-top: 10px; /* Space between ayat and translation */
   background-color: #f9f9f9;
@@ -92,12 +75,12 @@ body {
 
 /* Gaya untuk latar belakang modal */
 .modal-overlay {
-  position: fixed;
-  top: 0;
+  position: relative;
+  bottom: 100;
+  top: 40px;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
   display: none;
   justify-content: center;
   align-items: center;
@@ -106,11 +89,10 @@ body {
 
 /* Gaya untuk konten modal */
 .modal-content {
-  background: #fff;
   padding: 20px;
   border-radius: 5px;
-  max-width: 500px;
-  width: 100%;
+  max-width: 340px;
+  width: 50%;
   max-height: 80vh;
   overflow-y: auto;
 }
