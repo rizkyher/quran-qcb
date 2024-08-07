@@ -1,4 +1,4 @@
-let current_page = 176;
+let current_page = 597;
 
 function load_suras() {
   $.ajax({
