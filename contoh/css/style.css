@@ -11,8 +11,8 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: silver;
-  font-size: 1.6rem;
+  background-color: rgb(177, 241, 209);
+  font-size: 1.8rem;
 }
 
 .control__page-num {
@@ -24,7 +24,7 @@ html {
   border: none;
   background-color: transparent;
   cursor: pointer;
-  color: navy;
+  color: rgb(1, 43, 121);
   text-decoration: underline;
   font-size: 1.6rem;
   padding-bottom: 0.5rem;
@@ -42,7 +42,7 @@ html {
   overflow: auto;
 }
 #suras .active {
-  background-color: navy;
+  background-color: rgb(2, 138, 97);
   color: white;
 }
 #suras .active a {
@@ -70,7 +70,7 @@ html {
   filter: alpha(opacity=25);
 }
 #page a.active div {
-  background-color: blue;
+  background-color: rgb(108, 204, 248);
   opacity: 0.2;
   filter: alpha(opacity=25);
 }
