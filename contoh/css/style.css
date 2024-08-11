@@ -64,16 +64,17 @@ html {
   width: 29rem;
   margin-right: 2rem;
 }
-#page a:hover div {
+#page a:hover .ayat {
   background-color: yellow;
   opacity: 0.2;
   filter: alpha(opacity=25);
 }
-#page a.active div {
+#page a.active .ayat {
   background-color: rgb(108, 204, 248);
   opacity: 0.2;
   filter: alpha(opacity=25);
 }
+
 #page div {
   position: absolute;
 }
@@ -85,4 +86,16 @@ html {
   overflow: auto;
   margin-right: 1rem;
   font-size: 1.6rem;
+}
+
+
+#tooltips {
+  position: absolute;
+  z-index: 1000;
+  background-color: rgb(228, 161, 241);
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 250px;
+  display: none;
+  border-radius: 20% 20%;
 }
