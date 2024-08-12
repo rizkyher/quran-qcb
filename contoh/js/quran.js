@@ -97,10 +97,11 @@ function load_page(page) {
   })
 }
 
-function aya_clicked(event) {
+function aya_clicked(event) { 
   event.preventDefault()
   event.stopPropagation()
   
+
   pageX = event.pageX
   pageY = event.pageY
   
@@ -117,6 +118,7 @@ function aya_clicked(event) {
   el.addClass('active')
   // console.log('Aya Clicked!' + sura + ' ' + aya);
   load_aya(sura, aya)
+
 }
 
 function load_aya(sura, aya) {
@@ -137,16 +139,21 @@ function load_aya(sura, aya) {
     str = ''
     for (var i = 0; i < data.length; i++) {
       taf = data[i]
+
       str = taf.text
+
     }
 
     $('#tooltips').text(str)
     $('#tooltips').toggle()
+
     
     
     $taf.html(str)
+
   })
 }
+
 
 function page_change(event) {
   event.preventDefault()
