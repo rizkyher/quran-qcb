@@ -88,6 +88,7 @@ function load_page(page) {
           .css('left', seg.x + 'px')
           .css('width', seg.w + 'px')
           .css('height', seg.h + 'px')
+
         $a.append($d)
         // console.log('Segment:'+aya.sura_id+' Aya '+aya.aya_id);
       }
@@ -96,16 +97,26 @@ function load_page(page) {
   })
 }
 
-function aya_clicked(event) {
+function aya_clicked(event) { 
   event.preventDefault()
   event.stopPropagation()
-  el = $(event.target).closest('a')
-  sura = el.data('sura')
-  aya = el.data('aya')
-  $('a.aya_link').removeClass('active')
-  el.addClass('active')
-  // console.log('Aya Clicked!' + sura + ' ' + aya);
-  load_aya(sura, aya)
+  
+ pageX = event.pageX
+ pageY = event.pageY
+
+  $tooltips = $('#tooltips')
+  .css('left', '700px')
+  .css('top', (parseInt(pageY) + 20 )+ 'px')
+  
+ 
+
+  el = $(event.target).closet('a')
+   sura = el.data('sura')
+   aya = el.data('aya')
+   $('a.aya_link').removeClass('active')
+   el.addClass('active')
+   // console.log('Segment:'+aya.sura_id+' Aya '+aya.aya_id);
+   load_aya(sura,aya)
 }
 
 function load_aya(sura, aya) {
@@ -126,16 +137,17 @@ function load_aya(sura, aya) {
     str = ''
     for (var i = 0; i < data.length; i++) {
       taf = data[i]
-      str +=
-        '<strong>' +
-        tafseer_name[taf.type] +
-        '</strong><br>' +
-        taf.text +
-        '<hr>'
+      str = taf.text  
     }
-    $taf.html(str)
+
+    $('#tooltips').text(str)
+    $('#tooltips').toggle()
+
+
+   $taf.html(str)
   })
 }
+
 
 function page_change(event) {
   event.preventDefault()

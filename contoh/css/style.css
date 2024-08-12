@@ -78,6 +78,7 @@ html {
   position: absolute;
 }
 
+
 #tafseer {
   height: 43rem;
   width: 29rem;
@@ -86,3 +87,19 @@ html {
   margin-right: 1rem;
   font-size: 1.6rem;
 }
+
+
+#tooltips {
+ position: absolute;
+ z-index: 1000;
+ background-color: rgb(228, 161, 241);
+ border:2px solid#ccc ;
+ padding: 10px;
+ width: 250px;
+ display: none;
+ border-radius: 5%;
+
+}
+ 
+
+
