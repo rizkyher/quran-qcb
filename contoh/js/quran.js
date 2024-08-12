@@ -105,7 +105,7 @@ function aya_clicked(event) {
   pageY = event.pageY
   
   $tooltips = $('#tooltips')
-  .css('left', '430px')
+  .css('left', '700px')
   .css('top', (parseInt(pageY) + 20) + 'px')
 
   
