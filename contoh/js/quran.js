@@ -83,7 +83,7 @@ function load_page(page) {
           seg.w += seg.x
           seg.x = 0
         }
-        $d = $('<div>')
+        $d = $('<div class="ayat">')
           .css('top', seg.y + 'px')
           .css('left', seg.x + 'px')
           .css('width', seg.w + 'px')
@@ -101,22 +101,24 @@ function aya_clicked(event) {
   event.preventDefault()
   event.stopPropagation()
   
- pageX = event.pageX
- pageY = event.pageY
 
+  pageX = event.pageX
+  pageY = event.pageY
+  
   $tooltips = $('#tooltips')
   .css('left', '700px')
-  .css('top', (parseInt(pageY) + 20 )+ 'px')
-  
- 
+  .css('top', (parseInt(pageY) + 20) + 'px')
 
-  el = $(event.target).closet('a')
-   sura = el.data('sura')
-   aya = el.data('aya')
-   $('a.aya_link').removeClass('active')
-   el.addClass('active')
-   // console.log('Segment:'+aya.sura_id+' Aya '+aya.aya_id);
-   load_aya(sura,aya)
+  
+
+  el = $(event.target).closest('a')
+  sura = el.data('sura')
+  aya = el.data('aya')
+  $('a.aya_link').removeClass('active')
+  el.addClass('active')
+  // console.log('Aya Clicked!' + sura + ' ' + aya);
+  load_aya(sura, aya)
+
 }
 
 function load_aya(sura, aya) {
@@ -137,14 +139,18 @@ function load_aya(sura, aya) {
     str = ''
     for (var i = 0; i < data.length; i++) {
       taf = data[i]
-      str = taf.text  
+
+      str = taf.text
+
     }
 
     $('#tooltips').text(str)
     $('#tooltips').toggle()
 
+    
+    
+    $taf.html(str)
 
-   $taf.html(str)
   })
 }
 
