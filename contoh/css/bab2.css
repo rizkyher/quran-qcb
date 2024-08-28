@@ -38,6 +38,10 @@ body {
     text-align: center;
   }
 
+  .topnav7 {
+    text-align: center;
+  }
+
   
   
   
@@ -76,6 +80,12 @@ body {
     background-color: #04AA6D;
     position: relative;
   }
+
+  .topnav7 {
+    overflow: hidden;
+    background-color: #04AA6D;
+    position: relative;
+  }
   
   .topnav #myLinks {
     display: none;
@@ -98,6 +108,10 @@ body {
   }
 
   .topnav6 #myqcb1 {
+    display: none;
+  }
+  
+  .topnav6 #myqcb2 {
     display: none;
   }
   
@@ -233,6 +247,28 @@ body {
     color: black;
   }
 
+  .topnav7 a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  .topnav7 a.icon7 {
+    background: #04AA6D;
+    display: block;
+    position: absolute;
+    padding: 14px 16;
+    right: 0;
+    top: 0;
+  }
+  
+  .topnav7 a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
 
 
   
@@ -262,6 +298,11 @@ body {
   }
 
   .active6 {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+  .active7 {
     background-color: #04AA6D;
     color: white;
   }
