@@ -42,6 +42,10 @@ body {
     text-align: center;
   }
 
+  .topnav8 {
+    text-align: center;
+  }
+
   
   
   
@@ -87,6 +91,11 @@ body {
     position: relative;
   }
   
+  .topnav8 {
+    overflow: hidden;
+    background-color: #04AA6D;
+    position: relative;
+  }
   .topnav #myLinks {
     display: none;
   }
@@ -111,7 +120,11 @@ body {
     display: none;
   }
   
-  .topnav6 #myqcb2 {
+  .topnav7 #myqcb2 {
+    display: none;
+  }
+
+  .topnav8 #myqcb3 {
     display: none;
   }
   
@@ -269,6 +282,27 @@ body {
     color: black;
   }
 
+  .topnav8 a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  .topnav8 a.icon8 {
+    background: #04AA6D;
+    display: block;
+    position: absolute;
+    padding: 14px 16;
+    right: 0;
+    top: 0;
+  }
+  
+  .topnav8 a:hover {
+    background-color: #ddd;
+    color: black;
+  }
 
 
   
@@ -303,6 +337,11 @@ body {
   }
 
   .active7 {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+  .active8 {
     background-color: #04AA6D;
     color: white;
   }
