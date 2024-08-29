@@ -168,27 +168,20 @@ h2 {
   background-color: #f8f8f8;
   overflow: auto;
   margin-right: 1rem;
-
   font-size: 4rem;
-
+}
 
 
 #tooltips {
  position: absolute;
  z-index: 1000;
-
  background-color: rgba(158, 218, 178, 0.897);
-
  border:2px solid#ccc ;
  padding: 10px;
  width: 250px;
  display: none;
-<<<<<<< HEAD
  border-radius: 20px;
  font-size: 1,8rem;
-=======
- border-radius: 10px;
->>>>>>> 86f5911a75cd4ebd57ca45a10f5b1b9f9480405d
 
 }
  
