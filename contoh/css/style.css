@@ -13,7 +13,9 @@ html {
   align-items: center;
   background-color: rgb(181, 233, 207);
   font-size: 2rem;
-  width: 55%;
+  width: 54%;
+  border-radius: 25px;
+
 }
 
 .control__page-num {
@@ -44,7 +46,7 @@ html {
   overflow: auto;
 }
 #suras .active {
-  background-color: rgb(2, 138, 97);
+  background-color: #81b7f1;
   color: white;
 }
 #suras .active a {
@@ -69,7 +71,7 @@ html {
 #page a:hover .ayat {
   background-color: yellow;
   opacity: 0.2;
-  filter: alpha(opacity=25);
+  filter: alpha(opacity=27);
 }
 #page a.active .ayat {
   background-color: rgb(108, 204, 248);
@@ -88,32 +90,20 @@ html {
   background-color: #f8f8f8;
   overflow: auto;
   margin-right: 1rem;
-  font-size: 3rem;
-}
-
-
-#tooltips {
-  position: absolute;
-  z-index: 1000;
-  background-color: rgb(197, 216, 252);
-  border: 2px solid #ccc;
-  padding: 10px;
-  width: 250px;
-  display: none;
-  border-radius: 5%;
-  font-size: 1.3rem;
+  font-size: 4rem;
 }
 
 
 #tooltips {
  position: absolute;
  z-index: 1000;
- background-color: rgb(228, 161, 241);
+ background-color: rgba(158, 218, 178, 0.897);
  border:2px solid#ccc ;
  padding: 10px;
  width: 250px;
  display: none;
- border-radius: 5%;
+ border-radius: 20px;
+ font-size: 1,8rem;
 
 }
  
