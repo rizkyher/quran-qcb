@@ -106,7 +106,7 @@ function aya_clicked(event) {
   pageY = event.pageY
   
   $tooltips = $('#tooltips')
-  .css('left', '700px')
+  .css('left', '40%')
   .css('top', (parseInt(pageY) + 20) + 'px')
 
   
@@ -167,8 +167,9 @@ function page_change(event) {
 
 $(function () {
   console.log('JQuery Started!')
-  load_suras()
-  load_page(1)
+  load_suras();
+  load_page(1);
+  get_halaman();
   $(document).on('click', 'a.sura_link', sura_clicked)
   $(document).on('click', 'a.aya_link', aya_clicked)
 
@@ -186,3 +187,57 @@ $(function () {
     load_page(p)
   })
 })
+
+function get_halaman() {
+  let page = $("#mainbab").find("div");
+  page.html("");
+  console.log(page);
+  if (page.length == 0) {
+    return null;
+  } else {
+    var surah = page.attr("id").split("-");
+    if (surah[2] < 10) {
+      page_str = "00" + surah[2];
+    } else if (page < 100) {
+      page_str = "0" + surah[2];
+    } else {
+      page_str = "" + surah[2];
+    }
+    page.css("background-image", "url(img/" + page_str + ".jpg)");
+    p = $.ajax({
+      url: "json/page_" + surah[2] + ".json",
+      dataType: "json",
+    });
+    p.fail(function (data) {
+      console.log("Failed to load page map!");
+    });
+    p.done(function (data) {
+      for (var i = 0; i < data.length; i++) {
+        aya = data[i];
+
+        $a = $("<a>");
+        $a.attr("href", "#" + aya.aya_id);
+        $a.data("sura", aya.sura_id);
+        $a.data("aya", aya.aya_id);
+        $a.addClass("aya_link");
+        for (var j = 0; j < aya.segs.length; j++) {
+          seg = aya.segs[j];
+          if (seg.w != 0 && seg.w < 15) continue;
+          if (seg.x < 15) {
+            seg.w += seg.x;
+            seg.x = 0;
+          }
+          $d = $('<div class="ayat">')
+            .css("top", seg.y + "px")
+            .css("left", seg.x + "px")
+            .css("width", seg.w + "px")
+            .css("height", seg.h + "px");
+
+          $a.append($d);
+          // console.log('Segment:'+aya.sura_id+' Aya '+aya.aya_id);
+        }
+        page.append($a);
+      }
+    });
+  }
+}

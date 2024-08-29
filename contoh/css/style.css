@@ -7,15 +7,92 @@ html {
   margin: auto;
 }
 
+
+
+h2 {
+  font-size: 25px;
+  background-color: rgb(170, 194, 167);
+}
+
+
+
+#demo {
+  font-size: 20px;
+  padding-right: 610px;
+  background-color: #b1d19e;
+  margin-top: 10px;
+
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: rgb(0, 0, 0);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  float: right;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: rgb(71, 163, 216);
+}
+
+.dropdown-content {
+  display: none;
+  position: relative;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: rgb(0, 0, 0);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #dabaf5;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 #control {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgb(181, 233, 207);
   font-size: 2rem;
-  width: 54%;
-  border-radius: 25px;
-
+  width: 55%;
 }
 
 .control__page-num {
@@ -66,7 +143,6 @@ html {
   position: relative;
   height: 43rem;
   width: 29rem;
-  margin-right: 2rem;
 }
 #page a:hover .ayat {
   background-color: yellow;
@@ -90,20 +166,32 @@ html {
   background-color: #f8f8f8;
   overflow: auto;
   margin-right: 1rem;
-  font-size: 4rem;
+  font-size: 3rem;
+}
+
+
+#tooltips {
+  position: absolute;
+  z-index: 1000;
+  background-color: rgb(197, 216, 252);
+  border: 2px solid #ccc;
+  padding: 10px;
+  width: 250px;
+  display: none;
+  border-radius: 5%;
+  font-size: 1.3rem;
 }
 
 
 #tooltips {
  position: absolute;
  z-index: 1000;
- background-color: rgba(158, 218, 178, 0.897);
+ background-color: rgb(228, 161, 241);
  border:2px solid#ccc ;
  padding: 10px;
  width: 250px;
  display: none;
- border-radius: 20px;
- font-size: 1,8rem;
+ border-radius: 5%;
 
 }
  
