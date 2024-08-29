@@ -87,109 +87,109 @@ body {
   
   .topnav {
     overflow: hidden;
-    background-color: #0d9b51;
+    background-color: #034d31;
     position: relative;
   }
 
   .topnav2 {
     overflow: hidden;
-    background-color: #0d9b51;
+    background-color: #034d31;
     position: relative;
   }
 
   .topnav3 {
     overflow: hidden;
-    background-color: #0d9b51;
+    background-color: #034d31;
     position: relative;
   }
 
   .topnav4 {
     overflow: hidden;
-    background-color: #058053;
+    background-color: #034d31;
     position: relative;
   }
 
   .topnav5 {
     overflow: hidden;
-    background-color: #048657;
+    background-color: #034d31;
     position: relative;
   }
 
   .topnav6 {
     overflow: hidden;
-    background-color: #048b5a;
+    background-color: #034d31;
     position: relative;
   }
 
   .topnav7 {
     overflow: hidden;
-    background-color: #048354;
+    background-color: #034d31;
     position: relative;
   }
   
   .topnav8 {
     overflow: hidden;
-    background-color: #04754c;
+    background-color: #034d31;
     position: relative;
   }
   .topnav9 {
     overflow: hidden;
-    background-color: #047e51;
+    background-color: #034d31;
     position: relative;
   }
   .topnav10 {
     overflow: hidden;
-    background-color: #025a3a;
+    background-color: #034d31;
     position: relative;
   }
   .topnav11 {
     overflow: hidden;
-    background-color: #036843;
+    background-color: #034d31;
     position: relative;
   }
   .topnav12 {
     overflow: hidden;
-    background-color: #036843;
+    background-color: #034d31;
     position: relative;
   }
   .topnav13 {
     overflow: hidden;
-    background-color: #036e47;
+    background-color: #034d31;
     position: relative;
   }
   .topnav14 {
     overflow: hidden;
-    background-color: #0d9b51;
+    background-color: #034d31;
     position: relative;
   }
   .topnav15 {
     overflow: hidden;
-    background-color: #0d9b51;
+    background-color: #034d31;
     position: relative;
   }
   .topnav16 {
     overflow: hidden;
-    background-color: #0d9b51;
+    background-color: #034d31;
     position: relative;
   }
   .topnav17 {
     overflow: hidden;
-    background-color: #0d9b51;
+    background-color: #034d31;
     position: relative;
   }
   .topnav18 {
     overflow: hidden;
-    background-color: #0d9b51;
+    background-color: #034d31;
     position: relative;
   }
   .topnav19 {
     overflow: hidden;
-    background-color: #0da356;
+    background-color: #034d31;
     position: relative;
   }
   .topnav20 {
     overflow: hidden;
-    background-color: #0dad5b;
+    background-color: #0d8859;
     position: relative;
   }
 
@@ -222,6 +222,24 @@ body {
   }
 
   .topnav8 #myqcb3 {
+    display: none;
+  }
+  .topnav15 #myzakat {
+    display: none;
+  }
+  .topnav16 #mypuasa {
+    display: none;
+  }
+  .topnav17 #myhaji {
+    display: none;
+  }
+  .topnav18 #myzikir {
+    display: none;
+  }
+  .topnav19 #mydoa {
+    display: none;
+  }
+  .topnav20 #mydoa {
     display: none;
   }
   
@@ -526,6 +544,174 @@ body {
     background-color: #ddd;
     color: black;
   }
+  .topnav15 a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  .topnav15 a.icon15 {
+    background: #04AA6D;
+    display: block;
+    position: absolute;
+    padding: 14px 16;
+    right: 0;
+    top: 0;
+  }
+  
+  .topnav15 a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .topnav16 a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  .topnav16 a.icon16 {
+    background: #04AA6D;
+    display: block;
+    position: absolute;
+    padding: 14px 16;
+    right: 0;
+    top: 0;
+  }
+  
+  .topnav16 a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .topnav17 a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  .topnav17 a.icon17 {
+    background: #04AA6D;
+    display: block;
+    position: absolute;
+    padding: 14px 16;
+    right: 0;
+    top: 0;
+  }
+  
+  .topnav17 a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .topnav17 a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  .topnav17 a.icon17 {
+    background: #04AA6D;
+    display: block;
+    position: absolute;
+    padding: 14px 16;
+    right: 0;
+    top: 0;
+  }
+  
+  .topnav17 a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .topnav17 a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  .topnav17 a.icon17 {
+    background: #04AA6D;
+    display: block;
+    position: absolute;
+    padding: 14px 16;
+    right: 0;
+    top: 0;
+  }
+  
+  .topnav17 a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .topnav18 a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  .topnav18 a.icon18 {
+    background: #04AA6D;
+    display: block;
+    position: absolute;
+    padding: 14px 16;
+    right: 0;
+    top: 0;
+  }
+  
+  .topnav18 a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .topnav19 a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  .topnav19 a.icon19 {
+    background: #04AA6D;
+    display: block;
+    position: absolute;
+    padding: 14px 16;
+    right: 0;
+    top: 0;
+  }
+  
+  .topnav19 a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .topnav20 a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  .topnav20 a.icon20 {
+    background: #05b675;
+    display: block;
+    position: absolute;
+    padding: 14px 16;
+    right: 0;
+    top: 0;
+  }
+  
+  .topnav20 a:hover {
+    background-color: #ddd;
+    color: black;
+  }
 
   .active {
     background-color: #04AA6D;
@@ -590,7 +776,30 @@ body {
     background-color: #04AA6D;
     color: white;
   }
-
+  .active15 {
+    background-color: #04AA6D;
+    color: white;
+  }
+  .active16 {
+    background-color: #04AA6D;
+    color: white;
+  }
+  .active17 {
+    background-color: #04AA6D;
+    color: white;
+  }
+  .active18 {
+    background-color: #04AA6D;
+    color: white;
+  }
+  .active19 {
+    background-color: #04AA6D;
+    color: white;
+  }
+  .active14 {
+    background-color: #04AA6D;
+    color: white;
+  }
   .navbar {
     overflow: hidden;
     background-color: #15c7b8;
