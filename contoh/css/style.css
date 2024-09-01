@@ -121,7 +121,7 @@ h2 {
 #suras {
   top: 1.5rem;
   width: 20rem;
-  height: 43rem;
+  height: 50rem;
   overflow: auto;
 }
 #suras .active {
@@ -133,7 +133,7 @@ h2 {
 }
 
 .suras__table {
-  font-size: 1.6rem;
+  font-size: 1.9rem;
 }
 
 .suras__table th,
@@ -143,8 +143,9 @@ h2 {
 
 #page {
   position: relative;
-  height: 43rem;
+  height: 40rem;
   width: 29rem;
+
 }
 #page a:hover .ayat {
   background-color: yellow;
@@ -181,7 +182,7 @@ h2 {
  width: 250px;
  display: none;
  border-radius: 20px;
- font-size: 1,8rem;
+ font-size: 14px;
 
 }
  
