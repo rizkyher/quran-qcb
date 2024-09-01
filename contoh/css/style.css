@@ -119,10 +119,11 @@ h2 {
 }
 
 #suras {
-  top: 1.5rem;
-  width: 20rem;
-  height: 50rem;
+  top: 1.9rem;
+  width: 28rem;
+  height: 49rem;
   overflow: auto;
+  position: relative;
 }
 #suras .active {
   background-color: #81b7f1;
@@ -145,7 +146,8 @@ h2 {
   position: relative;
   height: 40rem;
   width: 29rem;
-
+  position: relative;
+ 
 }
 #page a:hover .ayat {
   background-color: yellow;
@@ -182,7 +184,7 @@ h2 {
  width: 250px;
  display: none;
  border-radius: 20px;
- font-size: 14px;
+ font-size: 15px;
 
 }
  
