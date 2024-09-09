@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kartu Ucapan Rahasia</title>
+    <style>
+        body {
+            background-color: #65b2ed; /* Warna background kuning muda */
+            font-family: 'Comic Sans MS', cursive;
+            text-align: center;
+        }
+        .secret {
+            color: #f0b297; /* Warna teks merah tomat */
+            font-size: 24px;
+            margin: 50px;
+        }
+        .btn-reveal {
+            padding: 10px 20px;
+            background-color: #edc38f;
+            color: rgb(0, 0, 0);
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .btn-reveal:hover {
+            background-color: #2e8b57;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome dija!</h1>
+    <p>Klik tombol di bawah ini yaa!.</p>
+    <button class="btn-reveal" onclick="revealSecret()">Klik here!</button>
+    <p class="secret" id="secretMessage" style="display:none;">love you ! 🌟</p>
+
+    <script>
+        function revealSecret() {
+            document.getElementById('secretMessage').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
