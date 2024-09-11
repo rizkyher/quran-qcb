@@ -1,44 +1,54 @@
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-        <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="css/sumber.css" />
-        <title>Al-Quran</title>
-    </head>
-    <body>
-        <div id="tooltips"></div>
-    
-        <h2><div class="navbar">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/sumber.css" />
+    <title>Al-Quran</title>
+    <style>
+        #115-6-142 {
+            width: 500px; /* Ukuran div */
+            height: 730px; /* Ukuran div */
+            background-image: url('img/142.jpg'); /* Pastikan path gambar benar */
+            background-size: contain; /* Mengatur gambar agar menyesuaikan div tanpa terduplikasi */
+            background-repeat: no-repeat; /* Mencegah pengulangan gambar */
+            background-position: center; /* Menempatkan gambar di tengah */
+        }
+    </style>
+</head>
+<body>
+    <div id="tooltips"></div>
+
+    <h2>
+        <div class="navbar">
             <a href="index.html">Home</a>
             <div class="dropdown">
-              <button class="dropbtn">BAB
-                <i class="fa fa-caret-down"></i>
-              </button>
-              <div class="dropdown-content">
-                <a href="bab.html">Pondasi</a>
-                <a href="bab.html">Allah SWt</a>
-                <a href="bab.html">Rasul SAW</a>
-                <a href="bab.html">Al Quran</a>
-                <a href="bab.html">Manusia</a>
-                <a href="bab.html">Syaitan</a>
-                <a href="bab.html">Ibadah</a>
-                <a href="bab.html">Surga dan Neraka</a>
-                <a href="bab.html">Doa</a>
-              </div>
-            </div> </h2>
-            <h2>Al-An-Am 6:115</h2>
-            <div id="mainbab" style="display: flex; width: 100%; justify-content: center;">
-                <div id="115-6-142" style="width: 300px; height: 430px;">
-                    Loading...
+                <button class="dropbtn">BAB
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="bab.html">Pondasi</a>
+                    <a href="bab.html">Allah SWt</a>
+                    <a href="bab.html">Rasul SAW</a>
+                    <a href="bab.html">Al Quran</a>
+                    <a href="bab.html">Manusia</a>
+                    <a href="bab.html">Syaitan</a>
+                    <a href="bab.html">Ibadah</a>
+                    <a href="bab.html">Surga dan Neraka</a>
+                    <a href="bab.html">Doa</a>
                 </div>
-                
             </div>
-            
-            
-                 
-            </div>
+        </div>
+    </h2>
 
-            <script src="js/jquery-1.11.3.min.js"></script>
-        <script src="js/jquery.hotkey.js"></script>
-        <script src="js/quran.js"></script>
+    <h2>Al-An-Am 6:115</h2>
+    <div id="mainbab" style="display: flex; width: 100%; justify-content: center;">
+        <div id="115-6-142">
+            <!-- Gambar diatur lewat CSS sebagai background -->
+        </div>
+    </div>
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.hotkey.js"></script>
+    <script src="js/quran.js"></script>
+</body>
 </html>
